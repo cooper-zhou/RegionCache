@@ -15,7 +15,7 @@ RegionCache是一个开源的Android区域性数据缓存工具， 不仅支持�
 然后在项目的gradle文件下添加:
 ```java
     dependencies {
-        compile 'com.github.aervon:regioncache:v1.0'
+        compile 'com.github.aervon:RegionCache:1.0'
     }
 ```
 ### Using
