@@ -1,7 +1,7 @@
 # RegionCache
 RegionCache是一个开源的Android区域性数据缓存工具， 不仅支持某个区域内基本类型数据，列表数据或者其他实体类数据的缓存，也支持View相关属性的缓存。对于区域内已经缓存的数据，可通过调用恢复缓存的方法将缓存数据自动恢复到指定的缓存对象中。
 
-###Download
+### Download
 使用RegionCache需要添加jitpack.io的仓库：
 
     allprojects {
@@ -16,7 +16,7 @@ RegionCache是一个开源的Android区域性数据缓存工具， 不仅支持�
         compile 'com.github.aervon:regioncache:v1.0'
     }
 
-###Using
+### Using
 在RegionCache中，把一个对象看成一个区域，对于这个区域对象中带有RegionCache注解的属性，将会被一键缓存，RegionCache标记如下：
 
     // 支持对自定义对象数据的缓存，缓存对象默认需要实现Serializable（如果重新实现了数据缓存方式则不需要实现）
@@ -79,7 +79,7 @@ RegionCache是一个开源的Android区域性数据缓存工具， 不仅支持�
                 });
 Note： 一般请把RegionCache的读取动作放在你视图初始化动作之后，因为如果缓存属性中有View的话，如果指定的View未被初始化就会导致该View的缓存数据恢复失败。
 
-###More
+### More
 RegionCache默认的数据缓存方式为文件读写，所以当缓存对象必须为实现了Serializable序列化接口的对象，RegionCache也支持拓展数据缓存方式，比如实现以数据库为存储方式的RegionCache：
     
     public class DatabaseCacheProvider implements ICacheProvider {
@@ -97,5 +97,5 @@ RegionCache默认的数据缓存方式为文件读写，所以当缓存对象必
        
     Region.build(new DatabaseCacheProvider());
 
-###Contact Me
+### Contact Me
 邮箱联系752979730@qq.com
